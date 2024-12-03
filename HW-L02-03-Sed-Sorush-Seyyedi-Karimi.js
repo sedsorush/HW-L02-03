@@ -55,3 +55,48 @@ email.addEventListener("click" , () => {
     errorEmail.style.display = "none"
     email.style.border = "#a7a6a6 1px solid"
 })
+
+// Empty boxes error
+
+const fullName = document.getElementById("name")
+const errorName = document.getElementById("errorName")
+
+if (fullName !== null) {
+    confirmed.addEventListener("click" , () => {
+        if (fullName.value === "") {
+            errorName.textContent = "This box can't be empty! Please enter your name."
+            errorName.style.display = "flex"
+            fullName.style.border = "2px , red , solid"
+        }
+    })
+    fullName.addEventListener("click" , () => {
+        errorName.style.display = "none"
+        fullName.style.border = "#a7a6a6 1px solid"
+    })
+}
+
+
+const errorPass1 = document.getElementById("errorPass1")
+
+confirmed.addEventListener("click" , () => {
+    if (pass1.value === "") {
+        errorPass1.textContent = "This box can't be empty! Please enter your password."
+        errorPass1.style.display = "flex"
+        pass1.style.border = "2px , red , solid"
+    }
+    if (pass2 !== null && pass2.value === "") {
+        errorPass1.textContent = "This box can't be empty! Please enter your password."
+        errorPass1.style.display = "flex"
+        pass2.style.border = "2px , red , solid"
+    }
+})
+pass1.addEventListener("click" , () => {
+    errorPass1.style.display = "none"
+    pass1.style.border = "#a7a6a6 1px solid"
+})
+if (pass2 !== null) {
+    pass2.addEventListener("click" , () => {
+        errorPass1.style.display = "none"
+        pass2.style.border = "#a7a6a6 1px solid"
+    })
+}
