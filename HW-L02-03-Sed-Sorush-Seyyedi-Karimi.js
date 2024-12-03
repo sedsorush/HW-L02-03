@@ -31,3 +31,27 @@ if (showpass2 !== null) {
             line2.style.display = "none"
         }
 })}
+
+// Email Authentication
+
+const email = document.getElementById("email")
+const confirmed = document.getElementById("ok")
+const errorEmail = document.getElementById("errorEmail")
+const regex = /^[a-zA-Z0-9.-_+%]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+confirmed.addEventListener("click" , () => {
+    if (email.value === "") {
+        email.style.border = "2px , red , solid"
+        errorEmail.textContent = "The box is empty! Please enter your email."
+        errorEmail.style.display = "flex"
+    }
+    else if (regex.test(email.value) === false) {
+        email.style.border = "2px , red , solid"
+        errorEmail.textContent = "Wrong email format! Please enter your email correctly."
+        errorEmail.style.display = "flex"
+    }
+})
+email.addEventListener("click" , () => {
+    errorEmail.style.display = "none"
+    email.style.border = "#a7a6a6 1px solid"
+})
