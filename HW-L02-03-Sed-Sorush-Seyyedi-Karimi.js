@@ -123,3 +123,12 @@ if (pass2 !== null) {
         pass2.style.border = "#a7a6a6 1px solid"
     })
 }
+
+// To stop form from submitting after an error occurs
+
+const form = document.getElementById("form")
+form.addEventListener("submit" , (event) => {
+    if (regex.test(email.value) === false || pass1.value === "" || (fullName !== null && fullName.value === "") || (pass2 !== null && pass2.value === "") || (pass2 !== null && pass1.value !== pass2.value)) {
+        event.preventDefault()
+    }
+})
