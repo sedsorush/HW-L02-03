@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 690px;
+    max-width: 1505px;    
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    color: #232323;
+}
+
+.image {
+    height: 689.5px;
+}
+
+.image img {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 752px;
+    object-fit: cover;
+    padding: 0;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form h1 {
+    font-size: 50px;
+    align-self: flex-start;
+    padding-left: 141px;
+}
+
+form .inputbox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 15px;
+}
+
+form .inputbox input {
+    padding: 15px 0 15px 60px;
+    width: 175%;
+    align-self: center;
+    font-family: Poppins;
+    margin-top: 3px;
+    border-radius: 5px;
+    border: #a7a6a6 1px solid;
+}
+
+form .inputbox label {
+    margin-left: -52%;
+    padding-top: 20px;
+    font-weight: 600;
+}
+
+form .inputbox img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+form .inputbox #img1 {top:17.5%; left:-39%; opacity:0.5;}
+form .inputbox #img2 {top:45%; left:-39%; opacity:0.5;}
+form .inputbox #img7 {top:73%; left:-39%; opacity:0.5;}
+form .inputbox #img8 {top:89%; left:-39%; opacity:0.5;}
+
+form .inputbox #showpass1 {
+    top:73%; 
+    left:130%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+
+    border: 0;
+    background-color: white;
+
+    cursor: pointer;
+}
+form .inputbox #showpass2 {
+    top:89%; 
+    left:130%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+
+    border: 0;
+    background-color: white;
+
+    cursor: pointer;
+}
+
+form .inputbox #img3 , #img5 {
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+form .inputbox #img4 , #img6 {
+    top: 0;
+    left: 0;
+
+    display: none;
+}
+
+form .inputbox #errorEmail {
+    width: 450px;
+    position: absolute;
+    right:-110px;
+    top: 198px;
+    font-size: 12px;
+    color: red;
+
+    display: none;
+
+}
+form .inputbox #errorName {
+    width: 450px;
+    position: absolute;
+    right:-110px;
+    top: 98px;
+    font-size: 12px;
+    color: red;
+
+    display: none;
+
+}
+form .inputbox #errorPass1 {
+    width: 450px;
+    position: absolute;
+    right:-110px;
+    top: 355px;
+    font-size: 12px;
+    color: red;
+
+    display: none;
+
+}
+
+form #ok {
+    margin: 20px;
+    margin-bottom: 0;
+    padding: 15px 188px 15px 188px;
+    background-color: #232323;
+    color: white;
+    font-family: Poppins;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+form button {
+    cursor: pointer;
+}
+form p a {
+    text-decoration: none;
+    color: rgb(16, 140, 182);
+}
+
+
+form footer {
+    bottom: 0;
+    position: absolute;
+    font-size: 13px;
+}
+
+form footer ul {
+    list-style: none;
+}
+form footer li {
+    display: inline;
+    padding: 15px 15px 0 15px;
+    margin-top: 500px;
+}
+
+form footer a {
+    text-decoration: none;
+    color: #232323;
+}
+
+
+@media screen and (max-width:1400px) {
+    .image img {
+        width: 700px;
+    }
+    
+}
+@media screen and (max-width:1300px) {
+    .image img {
+        width: 600px;
+    }
+    
+}
+@media screen and (max-width:1160px) {
+    .image img {
+        width: 500px;
+        height: 100%;
+    }
+    
+}
+@media screen and (max-width:1030px) {
+    body {
+        grid-template-columns: 0 1fr;
+    }
+
+    .image img {
+        display: none;
+    }
+
+    .form h1 {
+        align-self: center;
+        padding-left: 0;
+        padding-right: 270px;
+    }
+}
