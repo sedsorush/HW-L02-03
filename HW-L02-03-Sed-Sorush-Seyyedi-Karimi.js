@@ -100,3 +100,26 @@ if (pass2 !== null) {
         pass2.style.border = "#a7a6a6 1px solid"
     })
 }
+
+// Passwords matching
+
+if (pass2 !== null) {
+    confirmed.addEventListener("click" , () => {
+        if (pass1.value !== pass2.value) {
+            errorPass1.textContent = "Password not confirmed! Passwords are not the same."
+            errorPass1.style.display = "flex"
+            pass2.style.border = "2px , red , solid"
+            pass1.style.border = "2px , red , solid"
+        }
+    })
+}
+pass1.addEventListener("click" , () => {
+    errorPass1.style.display = "none"
+    pass1.style.border = "#a7a6a6 1px solid"
+})
+if (pass2 !== null) {
+    pass2.addEventListener("click" , () => {
+        errorPass1.style.display = "none"
+        pass2.style.border = "#a7a6a6 1px solid"
+    })
+}
